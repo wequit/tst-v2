@@ -523,12 +523,12 @@ export default function SpecialistDashboard() {
                               >
                                 {language === 'ru' ? 'Решение' : 'Чечим'}
                               </button>
-                              <button
-                                onClick={() => handleInspectionClick(application.id)}
-                                className="bg-gray-100 text-gray-600 px-3 py-1 rounded text-sm hover:bg-gray-200 whitespace-nowrap cursor-pointer"
-                              >
-                                {language === 'ru' ? 'Проверка' : 'Текшерүү'}
-                              </button>
+                              <Link 
+                          href={`/specialist/application/${application.id}`}
+                          className="bg-blue-100 text-blue-600 px-3 py-1 rounded text-sm hover:bg-blue-200 whitespace-nowrap cursor-pointer"
+                        >
+                          {language === 'ru' ? 'Открыть' : 'Ачуу'}
+                        </Link>
                             </div>
                           </td>
                         </tr>
