@@ -8,6 +8,7 @@ export async function generateStaticParams() {
   ];
 }
 
-export default function ApplicationReviewPage({ params }: { params: { id: string } }) {
-  return <ApplicationReview applicationId={params.id} />;
+ export default async function ApplicationReviewPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
+  return <ApplicationReview applicationId={id} />;
 }
